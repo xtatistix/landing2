@@ -139,45 +139,79 @@
         </nav>
 
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12 md:px-40">
-            <!-- Hero Content -->
-            <div class="z-10 text-center max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                    <span class="text-christi-500">İstatistiksel Veri Analizinde</span>
-                    <br>
-                    <span class="text-prussian-950">Yeni Nesil Çözüm</span>
-                </h1>
-                <p class="text-lg md:text-xl text-prussian-950/70 mb-8">
-                    Kompleks istatistiksel analizleri saniyeler içinde tamamlayın, güvenilir sonuçlar elde edin ve veriye dayalı kararlar alın.
-                </p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                    <!-- Primary CTA Button -->
-                    <button class="relative group shadow-md transition-all active:scale-95 inline-flex h-12 overflow-hidden rounded-3xl p-[1px]">
-                        <span class="absolute inset-[-2000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2B581B_0%,#F1EDF3_50%,#2B581B_100%)]"></span>
-                        <span class="inline-flex items-center justify-center w-full h-full px-6 font-medium text-white transition-all cursor-pointer group-hover:pr-4 rounded-3xl bg-christi-500 backdrop-blur-3xl">
-                            Ücretsiz Deneyin
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-all max-w-0 group-hover:max-w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </span>
-                    </button>
-                    
-                    <!-- Secondary Demo Button -->
-                    <button class="relative inline-flex items-center justify-center p-4 text-base font-medium transition-all text-prussian-950 hover:bg-prussian-950/10 rounded-3xl gap-2">
-                        <span>2 Dakikalık Demo</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+<section id="home" class="relative bg-white overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white"></div>
+  
+  <!-- Navigation Bar -->
+  <nav class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <img src="assets/img/istabot-logo.svg" alt="ISTABOT Logo" class="h-8 w-auto">
+      </div>
+      
+      <!-- Language Selector -->
+      <div class="flex items-center gap-2">
+        <button class="text-blue-900 hover:text-blue-700 font-medium px-2 py-1 rounded transition-colors" onclick="setLanguage('tr')">TR</button>
+        <span class="text-gray-300">|</span>
+        <button class="text-blue-900 hover:text-blue-700 font-medium px-2 py-1 rounded transition-colors" onclick="setLanguage('en')">EN</button>
+      </div>
+    </div>
+  </nav>
 
-            <!-- Demo Preview Section -->
-            <div class="relative w-full max-w-5xl mt-12 rounded-3xl overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-christi-500 to-prussian-950 opacity-20 blur"></div>
-                <img src="assets/img/demo-preview.webp" alt="istabot Demo" class="relative z-10 w-full rounded-3xl shadow-lg">
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <div class="text-center">
+      <!-- Main Heading -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6" data-i18n="landing.hero.title">
+        İstatistiksel Veri Analizinin Yeni Çağı
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-8" data-i18n="landing.hero.subtitle">
+        Karmaşık istatistiksel analizleri saniyeler içinde tamamlayın
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+        <!-- Main CTA -->
+        <a href="#contact" class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors">
+          <span data-i18n="landing.hero.cta">Hemen Başla</span>
+        </a>
+        
+        <!-- Demo Button -->
+        <button onclick="playDemo()" class="inline-flex items-center px-6 py-3 rounded-lg bg-white hover:bg-gray-50 text-blue-600 font-medium border-2 border-blue-600 transition-colors gap-2">
+          <span data-i18n="landing.hero.tryDemo">Demoyu İzle</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Video Preview -->
+    <div class="mt-16 relative max-w-4xl mx-auto">
+      <div class="aspect-video bg-gray-100 rounded-xl shadow-2xl overflow-hidden">
+        <!-- Demo Badge -->
+        <div class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-sm font-medium" data-i18n="landing.howItWorks.demoLabel">2 Dakikalık Demo</span>
+        </div>
+        
+        <!-- Video Placeholder -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <button onclick="playDemo()" class="group">
+            <div class="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg">
+              <svg class="w-6 h-6 text-blue-600 group-hover:text-blue-700 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8 5v10l7-5-7-5z"></path>
+              </svg>
             </div>
-        </section>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         <!-- Other Sections -->
 <!-- Replace the features section in index.html -->
