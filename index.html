@@ -215,137 +215,146 @@
 
         <!-- Other Sections -->
 <!-- Replace the features section in index.html -->
-<section id="features" class="relative bg-white py-20">
+<section id="howto" class="relative bg-white py-20">
   <!-- Background Pattern -->
-  <div class="absolute inset-0 bg-gradient-to-b from-white to-blue-50/30"></div>
-  
+  <div class="absolute inset-0 bg-gradient-to-b from-blue-50/30 to-white"></div>
+
   <!-- Content Container -->
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-blue-900" data-i18n="landing.features.title">
-        Temel Özellikler
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-blue-900 mb-4" data-i18n="landing.howItWorks.title">
+        Nasıl Çalışıyor?
       </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-i18n="landing.howItWorks.subtitle">
+        ISTABOT ile dakikalar içinde profesyonel istatistiksel analizler yapın
+      </p>
     </div>
 
-    <!-- Features Grid -->
+    <!-- Demo Video Section -->
+    <div class="mb-16">
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Video Container -->
+        <div class="aspect-video bg-gray-100 rounded-xl shadow-xl overflow-hidden">
+          <!-- Demo Badge -->
+          <div class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm font-medium" data-i18n="landing.howItWorks.demoLabel">2 Dakikalık Demo</span>
+          </div>
+
+          <!-- Video Placeholder -->
+          <div id="demoVideo" class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900/5 to-gray-900/20">
+            <button onclick="toggleDemo()" class="group transform transition-all duration-200 hover:scale-105">
+              <div class="flex items-center justify-center w-20 h-20 bg-white rounded-full shadow-lg group-hover:shadow-xl">
+                <svg class="w-8 h-8 text-blue-600 group-hover:text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 5v10l7-5-7-5z"></path>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Steps Process -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Speed Feature -->
-      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="flex flex-col items-center text-center">
-          <!-- Icon -->
-          <div class="mb-4 text-blue-600">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+      <!-- Step 1: Upload -->
+      <div class="relative">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2" data-i18n="landing.howItWorks.steps.upload.title">
+              Veri Yükleme
+            </h3>
+            <p class="text-gray-600" data-i18n="landing.howItWorks.steps.upload.description">
+              Excel dosyanızı sürükleyip bırakın veya bilgisayarınızdan yükleyin
+            </p>
           </div>
-          <!-- Title -->
-          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.speed.title">
-            Saniyeler İçinde Sonuç
-          </h3>
-          <!-- Description -->
-          <p class="text-gray-600" data-i18n="landing.features.speed.description">
-            Veri yükleme ve analiz süreciniz dakikalar değil, saniyeler sürüyor
-          </p>
+        </div>
+        <!-- Connector Line -->
+        <div class="hidden lg:block absolute top-1/2 right-0 w-full h-0.5 bg-blue-100 transform translate-x-4">
+          <div class="absolute right-0 -top-1.5 w-3 h-3 bg-blue-400 rounded-full"></div>
         </div>
       </div>
 
-      <!-- User Friendly Feature -->
-      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="flex flex-col items-center text-center">
-          <!-- Icon -->
-          <div class="mb-4 text-blue-600">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-            </svg>
+      <!-- Step 2: Analysis -->
+      <div class="relative">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2" data-i18n="landing.howItWorks.steps.analysis.title">
+              Analiz Seçimi
+            </h3>
+            <p class="text-gray-600" data-i18n="landing.howItWorks.steps.analysis.description">
+              İhtiyacınız olan analiz türünü seçin
+            </p>
           </div>
-          <!-- Title -->
-          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.userFriendly.title">
-            Kullanıcı Dostu
-          </h3>
-          <!-- Description -->
-          <p class="text-gray-600" data-i18n="landing.features.userFriendly.description">
-            Excel benzeri arayüz ile teknik bilgi gerektirmeden profesyonel analizler
-          </p>
+        </div>
+        <!-- Connector Line -->
+        <div class="hidden lg:block absolute top-1/2 right-0 w-full h-0.5 bg-blue-100 transform translate-x-4">
+          <div class="absolute right-0 -top-1.5 w-3 h-3 bg-blue-400 rounded-full"></div>
         </div>
       </div>
 
-      <!-- APA Format Feature -->
-      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="flex flex-col items-center text-center">
-          <!-- Icon -->
-          <div class="mb-4 text-blue-600">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
+      <!-- Step 3: Results -->
+      <div class="relative">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2" data-i18n="landing.howItWorks.steps.results.title">
+              Sonuçları Görüntüleme
+            </h3>
+            <p class="text-gray-600" data-i18n="landing.howItWorks.steps.results.description">
+              Saniyeler içinde profesyonel analizinizi alın
+            </p>
           </div>
-          <!-- Title -->
-          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.apaFormat.title">
-            APA Format
-          </h3>
-          <!-- Description -->
-          <p class="text-gray-600" data-i18n="landing.features.apaFormat.description">
-            Akademik yayınlara uygun, profesyonel görünümlü Word raporları
-          </p>
+        </div>
+        <!-- Connector Line -->
+        <div class="hidden lg:block absolute top-1/2 right-0 w-full h-0.5 bg-blue-100 transform translate-x-4">
+          <div class="absolute right-0 -top-1.5 w-3 h-3 bg-blue-400 rounded-full"></div>
         </div>
       </div>
 
-      <!-- Reliable Results Feature -->
-      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-        <div class="flex flex-col items-center text-center">
-          <!-- Icon -->
-          <div class="mb-4 text-blue-600">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
+      <!-- Step 4: Report -->
+      <div class="relative">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div class="flex flex-col items-center text-center">
+            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-2" data-i18n="landing.howItWorks.steps.report.title">
+              Rapor İndirme
+            </h3>
+            <p class="text-gray-600" data-i18n="landing.howItWorks.steps.report.description">
+              APA formatında raporunuzu indirin
+            </p>
           </div>
-          <!-- Title -->
-          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.reliable.title">
-            Güvenilir Sonuçlar
-          </h3>
-          <!-- Description -->
-          <p class="text-gray-600" data-i18n="landing.features.reliable.description">
-            Kanıtlanmış açık kaynak R kütüphaneleri, tekrarlanabilir sonuçlar
-          </p>
         </div>
       </div>
     </div>
 
-    <!-- Analysis Types -->
-    <div class="mt-20">
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
-        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <span class="text-blue-900 font-medium">Tanımlayıcı</span>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <span class="text-blue-900 font-medium">Bağımsız</span>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <span class="text-blue-900 font-medium">Bağımlı</span>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <span class="text-blue-900 font-medium">Korelasyon</span>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <span class="text-blue-900 font-medium">Ki-kare</span>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <span class="text-blue-900 font-medium">Çok Gruplu</span>
-        </div>
-      </div>
+    <!-- CTA Button -->
+    <div class="text-center mt-12">
+      <a href="#contact" class="inline-flex items-center px-8 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors">
+        <span data-i18n="landing.howItWorks.cta">Hemen Başla</span>
+      </a>
     </div>
-  </div>
-
-  <!-- Decorative Elements -->
-  <div class="hidden lg:block absolute bottom-0 right-0 transform translate-y-1/2">
-    <svg width="404" height="384" fill="none" viewBox="0 0 404 384">
-      <defs>
-        <pattern id="square-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-          <rect x="0" y="0" width="4" height="4" fill="currentColor" class="text-blue-100" />
-        </pattern>
-      </defs>
-      <rect width="404" height="384" fill="url(#square-pattern)" />
-    </svg>
   </div>
 </section>
 
