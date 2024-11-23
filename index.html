@@ -990,5 +990,38 @@
             s0.parentNode.insertBefore(s1,s0);
         })();
     </script>
+
+<script>
+// Language Switching
+function setLanguage(lang) {
+  // Update active state of language buttons
+  document.querySelectorAll('[onclick^="setLanguage"]').forEach(btn => {
+    btn.classList.toggle('font-bold', btn.getAttribute('onclick').includes(lang));
+  });
+  
+  // Load and apply translations
+  fetch(`assets/i18n/${lang}.json`)
+    .then(response => response.json())
+    .then(translations => {
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const translation = key.split('.').reduce((obj, i) => obj[i], translations);
+        if (translation) element.textContent = translation;
+      });
+    });
+}
+
+// Demo Video Playback
+function playDemo() {
+  // Implement demo video playback logic
+  console.log('Playing demo video...');
+  // You can trigger your video player here
+}
+
+// Set default language
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage('tr');
+});
+</script>
 </body>
 </html>
