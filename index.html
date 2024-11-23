@@ -215,140 +215,138 @@
 
         <!-- Other Sections -->
 <!-- Replace the features section in index.html -->
-<section id="features" class="relative py-20 px-4 md:px-40 bg-white">
-    <!-- Background Decoration -->
-    <div class="absolute inset-0 z-0">
-        <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-christi-400/5 to-transparent"></div>
-        <div class="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-prussian-950/5 to-transparent"></div>
+<section id="features" class="relative bg-white py-20">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white to-blue-50/30"></div>
+  
+  <!-- Content Container -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-blue-900" data-i18n="landing.features.title">
+        Temel Özellikler
+      </h2>
     </div>
 
-    <!-- Content -->
-    <div class="relative z-10 max-w-7xl mx-auto">
-        <!-- Title -->
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-prussian-950 mb-4">
-                Temel Özellikler
-            </h2>
-            <p class="text-lg text-prussian-950/70">
-                Araştırmanız için gereken temel istatistiksel analizler
-            </p>
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Speed Feature -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon -->
+          <div class="mb-4 text-blue-600">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.speed.title">
+            Saniyeler İçinde Sonuç
+          </h3>
+          <!-- Description -->
+          <p class="text-gray-600" data-i18n="landing.features.speed.description">
+            Veri yükleme ve analiz süreciniz dakikalar değil, saniyeler sürüyor
+          </p>
         </div>
+      </div>
 
-        <!-- Feature Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Speed Card -->
-            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div class="mb-4 text-christi-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-prussian-950 mb-2">
-                    Saniyeler İçinde Sonuç
-                </h3>
-                <p class="text-prussian-950/70">
-                    Saatler süren analizleri saniyeler içinde tamamlayın, araştırmanıza odaklanın
-                </p>
-            </div>
-
-            <!-- Reliability Card -->
-            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div class="mb-4 text-christi-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-prussian-950 mb-2">
-                    Güvenilir ve Kolay
-                </h3>
-                <p class="text-prussian-950/70">
-                    R'ın güvenilir kütüphaneleri, Excel'in kolaylığı - teknik bilgi gerektirmeden profesyonel analizler
-                </p>
-            </div>
-
-            <!-- Reports Card -->
-            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div class="mb-4 text-christi-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-prussian-950 mb-2">
-                    Yayın Kalitesinde Raporlar
-                </h3>
-                <p class="text-prussian-950/70">
-                    APA formatında, çok dilli, yayına hazır raporlar otomatik olarak hazır
-                </p>
-            </div>
-
-            <!-- Results Card -->
-            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                <div class="mb-4 text-christi-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                </div>
-                <h3 class="text-xl font-semibold text-prussian-950 mb-2">
-                    Güvenilir Sonuçlar
-                </h3>
-                <p class="text-prussian-950/70">
-                    Kanıtlanmış açık kaynak R kütüphaneleri, tekrarlanabilir sonuçlar
-                </p>
-            </div>
+      <!-- User Friendly Feature -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon -->
+          <div class="mb-4 text-blue-600">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+            </svg>
+          </div>
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.userFriendly.title">
+            Kullanıcı Dostu
+          </h3>
+          <!-- Description -->
+          <p class="text-gray-600" data-i18n="landing.features.userFriendly.description">
+            Excel benzeri arayüz ile teknik bilgi gerektirmeden profesyonel analizler
+          </p>
         </div>
+      </div>
 
-        <!-- Analysis Types -->
-        <div class="mt-20">
-            <h3 class="text-2xl font-bold text-prussian-950 mb-8 text-center">
-                Temel İstatistiksel Analizler
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Analysis Type Items -->
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow border border-gray-100">
-                    <h4 class="font-semibold text-prussian-950 mb-2">Tanımlayıcı İstatistik Analizi</h4>
-                    <p class="text-sm text-prussian-950/70">Verilerinizin temel özelliklerini ve dağılımını anlayın</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow border border-gray-100">
-                    <h4 class="font-semibold text-prussian-950 mb-2">Bağımsız Tek Grup Veri Analizi</h4>
-                    <p class="text-sm text-prussian-950/70">Tek grup verilerinizi referans değerlerle karşılaştırın</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow border border-gray-100">
-                    <h4 class="font-semibold text-prussian-950 mb-2">Bağımsız Çok Grup Veri Analizi</h4>
-                    <p class="text-sm text-prussian-950/70">Farklı gruplar arasındaki farkları analiz edin</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow border border-gray-100">
-                    <h4 class="font-semibold text-prussian-950 mb-2">Bağımlı Veri Analizi</h4>
-                    <p class="text-sm text-prussian-950/70">Tekrarlı ölçümlerinizi karşılaştırın</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow border border-gray-100">
-                    <h4 class="font-semibold text-prussian-950 mb-2">Korelasyon Analizi</h4>
-                    <p class="text-sm text-prussian-950/70">Değişkenler arasındaki ilişkileri inceleyin</p>
-                </div>
-                
-                <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-shadow border border-gray-100">
-                    <h4 class="font-semibold text-prussian-950 mb-2">Ki-kare Analizi</h4>
-                    <p class="text-sm text-prussian-950/70">Kategorik değişkenler arasındaki ilişkileri analiz edin</p>
-                </div>
-            </div>
+      <!-- APA Format Feature -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon -->
+          <div class="mb-4 text-blue-600">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.apaFormat.title">
+            APA Format
+          </h3>
+          <!-- Description -->
+          <p class="text-gray-600" data-i18n="landing.features.apaFormat.description">
+            Akademik yayınlara uygun, profesyonel görünümlü Word raporları
+          </p>
         </div>
+      </div>
 
-        <!-- Call to Action -->
-        <div class="mt-16 text-center">
-            <button class="relative group shadow-md transition-all active:scale-95 inline-flex h-12 overflow-hidden rounded-3xl p-[1px]">
-                <span class="absolute inset-[-2000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2B581B_0%,#F1EDF3_50%,#2B581B_100%)]"></span>
-                <span class="inline-flex items-center justify-center w-full h-full px-6 font-medium text-white transition-all cursor-pointer group-hover:pr-4 rounded-3xl bg-christi-500 backdrop-blur-3xl">
-                    Ücretsiz Deneyin
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-all max-w-0 group-hover:max-w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                </span>
-            </button>
+      <!-- Reliable Results Feature -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+        <div class="flex flex-col items-center text-center">
+          <!-- Icon -->
+          <div class="mb-4 text-blue-600">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-blue-900 mb-3" data-i18n="landing.features.reliable.title">
+            Güvenilir Sonuçlar
+          </h3>
+          <!-- Description -->
+          <p class="text-gray-600" data-i18n="landing.features.reliable.description">
+            Kanıtlanmış açık kaynak R kütüphaneleri, tekrarlanabilir sonuçlar
+          </p>
         </div>
+      </div>
     </div>
+
+    <!-- Analysis Types -->
+    <div class="mt-20">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-blue-900 font-medium">Tanımlayıcı</span>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-blue-900 font-medium">Bağımsız</span>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-blue-900 font-medium">Bağımlı</span>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-blue-900 font-medium">Korelasyon</span>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-blue-900 font-medium">Ki-kare</span>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-blue-900 font-medium">Çok Gruplu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative Elements -->
+  <div class="hidden lg:block absolute bottom-0 right-0 transform translate-y-1/2">
+    <svg width="404" height="384" fill="none" viewBox="0 0 404 384">
+      <defs>
+        <pattern id="square-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="4" height="4" fill="currentColor" class="text-blue-100" />
+        </pattern>
+      </defs>
+      <rect width="404" height="384" fill="url(#square-pattern)" />
+    </svg>
+  </div>
 </section>
 
 <!-- Replace the howto section in index.html -->
