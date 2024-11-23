@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>istabot | The New Era of Statistical Data Analysis</title>
+    <meta name="description" content="Complex statistical analyses in seconds. Publication-ready reports in APA format. The next generation statistical analysis solution.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/istabot-logo.svg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'prussian': {
+                            '950': '#093352',
+                        },
+                        'christi': {
+                            '400': '#69A52C',
+                            '500': '#2B581B',
+                        },
+                        'alabaster': {
+                            '50': '#F1EDF3',
+                        },
+                    },
+                    height: {
+                        '128': '32rem',
+                        '160': '40rem',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        tilt: 'tilt 10s infinite linear',
+                    },
+                    keyframes: {
+                        tilt: {
+                            '0%, 50%, 100%': {
+                                transform: 'rotate(0deg)',
+                            },
+                            '25%': {
+                                transform: 'rotate(0.5deg)',
+                            },
+                            '75%': {
+                                transform: 'rotate(-0.5deg)',
+                            },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        .fade-out {
+            animation: fadeIn 0.5s ease-out reverse;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Language Selector -->
+    <div x-data="{ language: 'tr' }" class="relative">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 z-50 flex items-center justify-between h-16 p-2 pb-2 md:h-20 w-full md:p-4 backdrop-blur-sm bg-white/40">
+            <!-- Logo Section -->
+            <div class="flex flex-col">
+                <div class="flex items-center gap-2">
+                    <div class="flex-shrink-0 w-[32px] h-[32px] md:w-[40px] md:h-[40px]">
+                        <img alt="istabot logo" src="assets/icons/istabot-logo.svg" class="object-contain w-full h-full">
+                    </div>
+                    <div class="inline-block text-base font-semibold text-transparent md:text-3xl bg-prussian-950 bg-clip-text">
+                        istabot
+                    </div>
+                    <div class="flex gap-2 text-xs font-medium md:text-sm">
+                        <button @click="language = 'tr'" :class="language === 'tr' ? 'bg-prussian-950 text-white' : 'bg-white text-prussian-950'" 
+                                class="p-0.5 border rounded-3xl border-prussian-950 transition-colors">
+                            TR
+                        </button>
+                        <button @click="language = 'en'" :class="language === 'en' ? 'bg-prussian-950 text-white' : 'bg-white text-prussian-950'"
+                                class="p-0.5 border rounded-3xl border-prussian-950 transition-colors">
+                            EN
+                        </button>
+                    </div>
+                </div>
+                <a href="https://eistatistik.com/" class="text-xs hover:underline text-prussian-950/60">
+                    eistatistik.com tarafından geliştirilmiştir.
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex gap-4 items-center *:font-medium text-prussian-950 xl:text-base md:text-sm">
+                <a href="#home" class="p-2 transition-all rounded-3xl hover:bg-prussian-950/20">
+                    Anasayfa
+                </a>
+                <a href="#services" class="p-2 transition-all rounded-3xl hover:bg-prussian-950/20">
+                    Hizmetlerimiz
+                </a>
+                <a href="#howto" class="p-2 transition-all rounded-3xl hover:bg-prussian-950/20">
+                    Nasıl İşliyor?
+                </a>
+                <a href="#usecases" class="p-2 transition-all rounded-3xl hover:bg-prussian-950/20">
+                    Kullanım Alanları
+                </a>
+                <a href="#comparison" class="p-2 transition-all rounded-3xl hover:bg-prussian-950/20">
+                    Karşılaştırma
+                </a>
+                <a href="#contact" class="p-2 transition-all rounded-3xl hover:bg-prussian-950/20">
+                    İletişim
+                </a>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-4 text-xs md:text-base">
+                <button class="p-2 font-medium transition-all rounded-3xl text-prussian-950 hover:bg-prussian-950/20">
+                    Giriş Yap
+                </button>
+                <button class="relative inline-flex md:h-12 h-10 overflow-hidden rounded-3xl p-[1px] active:scale-95 transition-all">
+                    <span class="absolute inset-[-2000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#093352_0%,#F1EDF3_50%,#093352_100%)]"></span>
+                    <span class="inline-flex items-center justify-center w-full h-full px-3 py-1 font-medium text-white transition-all duration-500 cursor-pointer hover:opacity-85 md:px-5 md:py-2 rounded-3xl bg-prussian-950 backdrop-blur-3xl">
+                        Kayıt Ol
+                    </span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-12 md:px-40">
+            <!-- Hero Content -->
+            <div class="z-10 text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="text-christi-500">İstatistiksel Veri Analizinde</span>
+                    <br>
+                    <span class="text-prussian-950">Yeni Nesil Çözüm</span>
+                </h1>
+                <p class="text-lg md:text-xl text-prussian-950/70 mb-8">
+                    Kompleks istatistiksel analizleri saniyeler içinde tamamlayın, güvenilir sonuçlar elde edin ve veriye dayalı kararlar alın.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                    <!-- Primary CTA Button -->
+                    <button class="relative group shadow-md transition-all active:scale-95 inline-flex h-12 overflow-hidden rounded-3xl p-[1px]">
+                        <span class="absolute inset-[-2000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#2B581B_0%,#F1EDF3_50%,#2B581B_100%)]"></span>
+                        <span class="inline-flex items-center justify-center w-full h-full px-6 font-medium text-white transition-all cursor-pointer group-hover:pr-4 rounded-3xl bg-christi-500 backdrop-blur-3xl">
+                            Ücretsiz Deneyin
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-all max-w-0 group-hover:max-w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    
+                    <!-- Secondary Demo Button -->
+                    <button class="relative inline-flex items-center justify-center p-4 text-base font-medium transition-all text-prussian-950 hover:bg-prussian-950/10 rounded-3xl gap-2">
+                        <span>2 Dakikalık Demo</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Demo Preview Section -->
+            <div class="relative w-full max-w-5xl mt-12 rounded-3xl overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-christi-500 to-prussian-950 opacity-20 blur"></div>
+                <img src="assets/img/demo-preview.webp" alt="istabot Demo" class="relative z-10 w-full rounded-3xl shadow-lg">
+            </div>
+        </section>
+
+        <!-- Other Sections -->
+        <section id="features"></section>
+        <section id="howto"></section>
+        <section id="usecases"></section>
+        <section id="comparison"></section>
+        <section id="contact"></section>
+
+        <!-- Footer -->
+        <footer class="bg-christi-500 text-white py-12 px-4 md:px-40">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="assets/icons/istabot-logo.svg" alt="istabot" class="w-10 h-10">
+                        <h3 class="text-2xl font-bold">istabot</h3>
+                    </div>
+                    <p class="text-sm opacity-90">Akademik araştırmanızı hızlandırın</p>
+                    <p class="text-sm mt-4">© 2024 istabot. Tüm hakları saklıdır.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:underline">Anasayfa</a></li>
+                        <li><a href="#services" class="hover:underline">Hizmetlerimiz</a></li>
+                        <li><a href="#howto" class="hover:underline">Nasıl İşliyor?</a></li>
+                        <li><a href="#comparison" class="hover:underline">Karşılaştırma</a></li>
+                        <li><a href="#contact" class="hover:underline">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">İletişim</h4>
+                    <p class="mb-2">7/24 Canlı Destek</p>
+                    <p class="mb-2">+90 850 885 12 56</p>
+                    <p class="mb-2">+90 538 615 0 444</p>
+                    <address class="not-italic">
+                        Körfez Mahallesi 19 Mayıs Kümesi<br>
+                        Atakum, Samsun
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Tawk.to Integration -->
+    <script>
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/YOUR_TAWK_TO_ID/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+</body>
+</html>
